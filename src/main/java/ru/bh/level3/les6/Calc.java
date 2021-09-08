@@ -19,7 +19,5 @@ public class Calc {
         return a / b;
     }
 
-   public int sum(int[] arr) {
-        return Arrays.stream(arr).sum();
-    }
+
 }
