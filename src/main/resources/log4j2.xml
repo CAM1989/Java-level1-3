@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="basePath">logs</Property>
+    </Properties>
+
+    <Appenders>
+        <File name="fileLogger" fileName="${basePath}/logfile.log">
+            <PatternLayout pattern="[%-5p] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} (%F:%L) - %m%n"/>
+        </File>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%-5p] %d{yyyy-MM-dd HH:mm:ss} [%t] %c{1}  (%F:%L) - %m%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <appender-ref ref="fileLogger"/>
+            <appender-ref ref="console"/>
+        </Root>
+
+        <Logger name="ru.bh.level3.les6.MainApp" level="trace">
+        </Logger>
+    </Loggers>
+</Configuration>
